@@ -18,6 +18,7 @@ defmodule ScsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live("/scs", UserLive.Index, :index)
   end
 
   # Other scopes may use custom stacks.
