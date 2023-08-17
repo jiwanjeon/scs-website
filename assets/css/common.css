@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/* ----- common ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+.inner02 {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+::selection {
+  background-color: #7B86D8;
+}
+
+@media (max-width: 1400px) {
+  .inner02 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+/* ----- text ----- */
+.page_title {
+  width: auto;
+  height: auto;
+  margin: 8rem 0 4rem 0;
+  padding-top: 90px;
+}
+
+.page_title .category {
+  width: fit-content;
+  height: 2.5em;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid #414EAC;
+  border-radius: 100%;
+  color: #414EAC;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.page_title h1,
+h1 {
+  margin-top: 2.5rem;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 4.3rem;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .page_title {
+    margin: 7rem 0 3rem 0;
+  }
+
+  .page_title .category {
+    font-size: 1rem;
+  }
+
+  .page_title h1,
+  h1 {
+    max-width: 80%;
+    margin: 2rem auto 0 auto;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .page_title h1,
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .page_title {
+    margin: 4rem 0 3rem 0;
+  }
+
+  .page_title h1,
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ----- btn ----- */
+.btn_circle {
+  height: fit-content;
+  padding: 0.7rem 1rem;
+  border-radius: 5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn_circle:hover {
+  border: 1px solid #7b86d8;
+  color: #fff;
+  background-color: #7b86d8;
+}
+
+.btn_blue {
+  border: 1px solid #414EAC;
+  color: #fff;
+  background-color: #414EAC;
+}
+
+.btn_white {
+  border: 1px solid #414EAC;
+  color: #414EAC;
+  background-color: #fff;
+}
+
+.btn_detail {
+  width: fit-content;
+  line-height: 1.3;
+  color: #414EAC;
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn_detail:hover {
+  color: #7b86d8;
+}
+
+.btn_detail::after {
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  background-color: #414EAC;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.btn_detail:hover::after {
+  background-color: #7b86d8;
+  animation: btn_detail 1s;
+}
+
+@keyframes btn_detail {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
