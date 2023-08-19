@@ -3,18 +3,12 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
-.liveview-container-flex {
-  display: flex;
-  flex: 1;
+.content {
+  height: 3000px;
 }
 
-.liveview-container-flex>.container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
+.content .header {}
 
-.inquire {
-  width: 100%;
-  padding: 30%;
-}
+/* .background_image {
+  padding-top: 134px;
+} */

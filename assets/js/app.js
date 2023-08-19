@@ -39,3 +39,27 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+// 백그라운드 이미지 관련 js
+import {
+  Carousel,
+  initTE,
+} from "tw-elements";
+
+initTE({ Carousel });
+
+var hidden = document.getElementById("collapse-toggle-button");
+if (hidden) {
+  hidden.onclick = function () {
+    var navbar_sticky = document.getElementById("navbar-sticky");
+    classList = navbar_sticky.classList
+    console.log(classList)
+
+    if (classList.contains("hidden")) {
+      navbar_sticky.classList.remove("hidden");
+    }
+    else {
+      navbar_sticky.classList.add("hidden");
+    }
+  }
+}
+

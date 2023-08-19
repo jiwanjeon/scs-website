@@ -6,7 +6,9 @@ defmodule ScsWeb.UserLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, stream(socket, :users, SCS.list_users())}
+    {:ok,
+     socket
+     |> assign(:navbar_hidden_value, "hidden")}
   end
 
   @impl true
