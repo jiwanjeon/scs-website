@@ -1,4 +1,4 @@
-defmodule ScsWeb.UserLive.Index do
+defmodule ScsWeb.MainLive.Index do
   use ScsWeb, :live_view
 
   alias Scs.SCS
@@ -35,7 +35,7 @@ defmodule ScsWeb.UserLive.Index do
   end
 
   @impl true
-  def handle_info({ScsWeb.UserLive.FormComponent, {:saved, user}}, socket) do
+  def handle_info({ScsWeb.MainLive.FormComponent, {:saved, user}}, socket) do
     {:noreply, stream_insert(socket, :users, user)}
   end
 

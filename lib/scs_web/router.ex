@@ -18,7 +18,15 @@ defmodule ScsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    live("/scs", UserLive.Index, :index)
+    live("/scs", MainLive.Index, :index)
+    live("/scs/admission", AdmissionLive.Index, :index)
+    live("/scs/about", AboutLive.Index, :index)
+    live("/scs/academic", AcademicLive.Index, :index)
+    live("/scs/del", DelLive.Index, :index)
+    live("/scs/athletics", AthleticsLive.Index, :index)
+    live("/scs/arts", ArtsLive.Index, :index)
+    live("/scs/giving", GivingLive.Index, :index)
+    live("/scs/etc", EtcLive.Index, :index)
   end
 
   # Other scopes may use custom stacks.

@@ -1,4 +1,4 @@
-defmodule ScsWeb.UserLive.Show do
+defmodule ScsWeb.MainLive.Show do
   use ScsWeb, :live_view
 
   alias Scs.SCS

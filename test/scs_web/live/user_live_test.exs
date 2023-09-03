@@ -1,4 +1,4 @@
-defmodule ScsWeb.UserLiveTest do
+defmodule ScsWeb.MainLiveTest do
   use ScsWeb.ConnCase
 
   import Phoenix.LiveViewTest

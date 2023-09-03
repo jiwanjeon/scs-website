@@ -1,4 +1,4 @@
-defmodule ScsWeb.UserLive.FormComponent do
+defmodule ScsWeb.MainLive.FormComponent do
   use ScsWeb, :live_component
 
   alias Scs.SCS
