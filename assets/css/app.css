@@ -7,7 +7,13 @@
   height: 3000px;
 }
 
-.content .header {}
+.about-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.about-dropdown:hover .about-dropdown-content {
+  display: block;
+}
 
 /* .background_image {
   padding-top: 134px;

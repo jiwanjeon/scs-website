@@ -1,125 +1,499 @@
 <div class="content">
   <!-- 헤더 -->
   <div class="header">
-    <section class="as_section">
-      <nav
-        class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="" class="flex items-center">
-            <img
-              src="data:image/png;base64,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"
-              class="h-8 mr-3" style="width:210px; height:102px;" alt="logo">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+        <a href="" class="flex items-center">
+          <img src="/images/sierra_canyon_school_logo.jpg" class="h-12 w-12" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sierra Canyon School</span>
+        </a>
+        <div class="flex items-center md:order-2">
+          <button data-collapse-toggle="mega-menu" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mega-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
 
-          </a>
-          <div class="flex md:order-2">
-            <a href="https://drive.google.com/file/d/1o-MvaSrfiU9Q5TZq_WN3PNLVQBbH0B6o/view?usp=sharing"
-              target="_blank">
-              <button type="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Download
-                PDF</button>
-            </a>
-            <button type="button"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply
-              Now</button>
-            <button data-collapse-toggle="navbar-sticky" type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky" aria-expanded="false" id="collapse-toggle-button">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15" />
-              </svg>
-            </button>
-          </div>
-          <!-- TODO: hidden 값 nav 클릭 시 바꿔줘야 함-->
-          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a href="#"
-                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our
-                  team</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FAQ</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </section>
-  </div>
+        <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+          <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+            <!-- About Drop Down-->
+            <li>
+              <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                About <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Head of School Welcome
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        At a Glance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Missions & Values
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        History
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        School Leadership
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        In the Community
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Employment Opportunities
 
-  <!-- 뒷 배경 이미지 -->
-  <div class="background_image pt-36">
-    <div id="carouselExampleControls" class="relative" data-te-carousel-init data-te-ride="carousel">
-      <!--Carousel items-->
-      <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-        <!--First item-->
-        <div
-          class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-te-carousel-item data-te-carousel-active>
-          <img src="https://media.marketrealist.com/brand-img/e5E5Fc5mi/0x0/sierra-canyon-tuition-1662146536364.jpg"
-            class="block w-full" alt="Wild Landscape" />
-        </div>
-        <!--Second item-->
-        <div
-          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-te-carousel-item>
-          <img src="https://s3-us-west-1.amazonaws.com/delamo-webassests/xEo4MJDdSGB8XuBW5dds_5.jpg"
-            class="block w-full" alt="Camera" />
-        </div>
-        <!--Third item-->
-        <div
-          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-te-carousel-item>
-          <img src="https://s3-us-west-1.amazonaws.com/delamo-webassests/V3Uo4Z8QOyYKC8lXAwpc_3.jpg"
-            class="block w-full" alt="Exotic Fruits" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Media Relations
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Contact & Directions
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Admissions Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button2" data-dropdown-toggle="mega-menu-dropdown2"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Admissions
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown2"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Welcome
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Virtual Tours
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Visit Us
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        How to Apply
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Tuition & Financial Aid
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Transportation
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        FAQs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        License
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        International Program
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Academics Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button3" data-dropdown-toggle="mega-menu-dropdown3"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Academics
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown3"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        "Lower School /
+                        Grades Pre K-6"
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        "Middle School /
+                        Grades 7&8"
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        "Upper School /
+                        Grades 9-12"
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        College Counseling
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        "Lower School
+                        Extended Day Care & Enrichment"
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Summer Programs
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Del Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button4" data-dropdown-toggle="mega-menu-dropdown4"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Del
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown4"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        DEI Overview
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Task Force and Goals
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        DEI News
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Resources
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Athletics -->
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Athletics
+              </a>
+            </li>
+
+            <!-- Arts Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button5" data-dropdown-toggle="mega-menu-dropdown5"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Arts
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown5"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Arts Overview
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Visual Arts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Performing Arts
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        SCS Film Festival
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Giving Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button6" data-dropdown-toggle="mega-menu-dropdown6"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Giving
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown6"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        The Sierra Canyon Fund
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Why Give?
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Ways to Give
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Make a Gift
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        FAQs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Dream with the Faces of the Future
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <!-- Arts Drop Down -->
+            <li>
+              <button id="mega-menu-dropdown-button7" data-dropdown-toggle="mega-menu-dropdown7"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                ETC
+                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="mega-menu-dropdown7"
+                class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                  <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Request Info
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        Quinklinks
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                        mySC
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Apply
+                Now</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <!--Carousel controls - prev item-->
-      <button
-        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-te-target="#carouselExampleControls" data-te-slide="prev">
-        <span class="inline-block h-8 w-8">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </span>
-        <span
-          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
-      </button>
-      <!--Carousel controls - next item-->
-      <button
-        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-te-target="#carouselExampleControls" data-te-slide="next">
-        <span class="inline-block h-8 w-8">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </span>
-        <span
-          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
-      </button>
+
+
+  </div>
+
+  <!-- 헤더 내용 -->
+  <div class="header_content pt-2">
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+      <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+      <div
+        class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">2024 SIERRA CANYON SCHOOL</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300">Sierra Canyon School is a place where ingenious teachers,
+            intrepid students, and forward-thinking leaders work together
+            to shape an education on the adventurous edge. Teachers create meaningful, hands-on learning experiences in
+            the
+            classroom, on the stage, on the playing field and court, and on life-changing journeys. Graduates are primed
+            to excel at
+            the finest colleges and universities, forge purposeful careers, and employ their unshakable optimism to
+            improve the
+            wider world.</p>
+        </div>
+        <div
+          class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
+          style="	margin-top: 4rem;">
+          <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10">
+            <svg class="h-7 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                clip-rule="evenodd" />
+            </svg>
+            <div class="text-base leading-7">
+              <h3 class="font-semibold text-white">ADMISSION</h3>
+              <p class="mt-2 text-gray-300">Are you ready to take the big leap? You should consider this school as it is
+                an important time.</p>
+            </div>
+          </div>
+          <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10">
+            <svg class="h-7 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M7.171 4.146l1.947 2.466a3.514 3.514 0 011.764 0l1.947-2.466a6.52 6.52 0 00-5.658 0zm8.683 3.025l-2.466 1.947c.15.578.15 1.186 0 1.764l2.466 1.947a6.52 6.52 0 000-5.658zm-3.025 8.683l-1.947-2.466c-.578.15-1.186.15-1.764 0l-1.947 2.466a6.52 6.52 0 005.658 0zM4.146 12.83l2.466-1.947a3.514 3.514 0 010-1.764L4.146 7.171a6.52 6.52 0 000 5.658zM5.63 3.297a8.01 8.01 0 018.738 0 8.031 8.031 0 012.334 2.334 8.01 8.01 0 010 8.738 8.033 8.033 0 01-2.334 2.334 8.01 8.01 0 01-8.738 0 8.032 8.032 0 01-2.334-2.334 8.01 8.01 0 010-8.738A8.03 8.03 0 015.63 3.297zm5.198 4.882a2.008 2.008 0 00-2.243.407 1.994 1.994 0 00-.407 2.243 1.993 1.993 0 00.992.992 2.008 2.008 0 002.243-.407c.176-.175.31-.374.407-.585a2.008 2.008 0 00-.407-2.243 1.993 1.993 0 00-.585-.407z"
+                clip-rule="evenodd" />
+            </svg>
+            <div class="text-base leading-7">
+              <h3 class="font-semibold text-white">Lower Campus</h3>
+              <p class="mt-2 text-gray-300">Since our founding four decades ago, a spirit of enthusiastic creativity has
+                swept through Sierra Canyon School. </p>
+            </div>
+          </div>
+          <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10">
+            <svg class="h-7 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M2 3.5A1.5 1.5 0 013.5 2h9A1.5 1.5 0 0114 3.5v11.75A2.75 2.75 0 0016.75 18h-12A2.75 2.75 0 012 15.25V3.5zm3.75 7a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zm0 3a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM5 5.75A.75.75 0 015.75 5h4.5a.75.75 0 01.75.75v2.5a.75.75 0 01-.75.75h-4.5A.75.75 0 015 8.25v-2.5z"
+                clip-rule="evenodd" />
+              <path d="M16.5 6.5h-1v8.75a1.25 1.25 0 102.5 0V8a1.5 1.5 0 00-1.5-1.5z" />
+            </svg>
+            <div class="text-base leading-7">
+              <h3 class="font-semibold text-white">Apper Campus</h3>
+              <p class="mt-2 text-gray-300">The Upper School offers a rigorous academic curriculum taught by passionate,
+                diverse and expert teachers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 
   <!-- About에 관한 컨텐츠-->
@@ -150,144 +524,47 @@
       </div>
     </section>
 
-    <!-- 후기 화면-->
-    <div class="testimonial-cards">
-      <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-          <div class="mx-auto max-w-screen-sm">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Testimonials</h2>
-            <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection
-              of
-              open-source web components and elements built with the utility classes from Tailwind</p>
-          </div>
-          <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
-            <figure
-              class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to
-                  integrate
-                </h3>
-                <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy
-                  this was
-                  to integrate within my application. Most templates are a pain, code is scattered, and near impossible
-                  to
-                  theme.</p>
-                <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of
-                  minutes to
-                  copy the code, customise it and integrate within a Laravel + Vue application.</p>
-                <p class="my-4">If you care for your time, I hands down would go with this."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <img class="w-9 h-9 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                  alt="profile picture">
-                <div class="space-y-0.5 font-medium dark:text-white text-left">
-                  <div>Bonnie Green</div>
-                  <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure
-              class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-                <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular
-                  Tailwind
-                  CSS framework. From the most used UI components like forms and navigation bars to the whole app
-                  screens
-                  designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
-                <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of
-                  Tailwind CSS is a huge timesaver!"</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <img class="w-9 h-9 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
-                  alt="profile picture">
-                <div class="space-y-0.5 font-medium dark:text-white text-left">
-                  <div>Roberta Casas</div>
-                  <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure
-              class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
-                <p class="my-4">"As someone who mainly designs in the browser, I've been a casual user of Figma, but as
-                  soon
-                  as I saw and started playing with FlowBite my mind was 🤯.</p>
-                <p class="my-4">Everything is so well structured and simple to use (I've learnt so much about Figma by
-                  just
-                  using the toolkit).</p>
-                <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up
-                  your
-                  next application."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <img class="w-9 h-9 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                  alt="profile picture">
-                <div class="space-y-0.5 font-medium dark:text-white text-left">
-                  <div>Jese Leos</div>
-                  <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure
-              class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-                <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the
-                  best
-                  things from 2 different worlds: Figma and Tailwind.</p>
-                <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <img class="w-9 h-9 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
-                  alt="profile picture">
-                <div class="space-y-0.5 font-medium dark:text-white text-left">
-                  <div>Joseph McFall</div>
-                  <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="text-center">
-            <a href="#"
-              class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Show
-              more...</a>
-          </div>
-        </div>
-      </section>
-    </div>
-
     <!-- 데이터 화면 -->
     <section class="bg-white dark:bg-gray-900">
       <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+        <div class="text-6xl mb-10">Sierra Canyon School Rankings</div>
+
         <dl class="grid max-w-screen-md gap-8 mx-auto text-gray-900 sm:grid-cols-3 dark:text-white">
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 text-3xl md:text-4xl font-extrabold">10K+</dt>
-            <dd class="font-light text-gray-500 dark:text-gray-400">admission student</dd>
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#41 of 418</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best Boarding High Schools in America</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 text-3xl md:text-4xl font-extrabold">10K+</dt>
-            <dd class="font-light text-gray-500 dark:text-gray-400">enrolled in prestigious universities</dd>
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#53 of 7,010</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Most Diverse Private High Schools in America</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 text-3xl md:text-4xl font-extrabold">1th</dt>
-            <dd class="font-light text-gray-500 dark:text-gray-400">Domestic school ranking</dd>
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#71 of 2,594</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best Private K-12 Schools in America</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 text-3xl md:text-4xl font-extrabold">1th</dt>
-            <dd class="font-light text-gray-500 dark:text-gray-400">Global school ranking</dd>
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#96 of 25,861</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best High Schools for Athetes in America</dd>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <dt class="mb-2 text-3xl md:text-4xl font-extrabold">30</dt>
-            <dd class="font-light text-gray-500 dark:text-gray-400">Assistant teacher</dd>
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#132 of 4,159</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best College Prep Private High Schools in America
+            </dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#144 of 4,323</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best Private High Schools in America</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl md:text-3xl font-extrabold">#310 of 8,786</dt>
+            <dd class="font-light text-gray-500 dark:text-gray-400">Best High Schools for STEM in America</dd>
           </div>
         </dl>
+        <a href="https://www.niche.com/k12/sierra-canyon-school-chatsworth-ca/rankings/" target="_blank">
+          referenced 2023 niche.com(click here)
+        </a>
       </div>
+
     </section>
   </div>
 

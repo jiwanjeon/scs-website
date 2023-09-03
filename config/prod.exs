@@ -1,5 +1,14 @@
 import Config
 
+config :scs, Scs.Repo,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "scs_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
