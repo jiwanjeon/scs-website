@@ -30,7 +30,7 @@ defmodule ScsWeb.MainLive.Index do
 
   defp apply_action(socket, :index, _params) do
     socket
-    |> assign(:page_title, "Listing Users")
+    |> assign(:page_title, "Sierra Canyon School 2024")
     |> assign(:user, nil)
   end
 
