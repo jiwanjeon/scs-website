@@ -27,6 +27,8 @@ defmodule ScsWeb.Router do
     live("/scs/arts", ArtsLive.Index, :index)
     live("/scs/giving", GivingLive.Index, :index)
     live("/scs/etc", EtcLive.Index, :index)
+    live("/scs/student-life", StudentLifeLive.Index, :index)
+    live("/scs/community", CommunityLive.Index, :index)
   end
 
   # Other scopes may use custom stacks.
